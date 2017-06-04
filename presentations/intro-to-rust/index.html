@@ -14,6 +14,10 @@ class: middle, center
 ![ferris](img/ferris.gif)
 # A Very Brief Intro to Rust
 
+Erick Tryzelaar
+
+erick.tryzelaar@gmail.com
+
 ???
 
 * This is Ferris, our unofficial mascot!
@@ -21,13 +25,13 @@ class: middle, center
 ---
 class: middle, center
 
-## 2ND RUSTBRIDGE IN THE WORLD!
+## 3RD RUSTBRIDGE IN THE WORLD!
 
 <iframe src="globe.html" style="width: 100%; height: 100% ; border: none" />
 
 ???
 
-* Welcome to the 2nd Rustbridge IN THE WORLD
+* Welcome to the 3rd Rustbridge IN THE WORLD
 
 ---
 class: middle, center
@@ -44,7 +48,7 @@ class: middle, left
 
 ## Overview
 
-* Rust, Cargo, Setup
+* Rust, Rustup, Cargo, Setup
 * Syntax + Concepts mostly the same as other languages
 * Syntax + Concepts particular to Rust
 * Further learning
@@ -91,12 +95,27 @@ class: middle, left
 ---
 class: middle, left
 
+## What is Rustup?
+
+* Official Rust toolchain installer
+
+1. `curl https://sh.rustup.rs -sSf | sh`
+2. `rustup install stable`
+
+Or you can use one of the builtin installers:
+
+https://www.rust-lang.org/en-US/other-installers.html
+
+---
+class: middle, left
+
 ## What is Cargo?
 
 * Package manager
 * Build tool
 * Test runner
 * Documentation generator
+* Package publisher
 
 ???
 
@@ -146,7 +165,7 @@ class: middle, left
 [package]
 name = "rustbridge"
 version = "0.1.0"
-authors = ["Carol (Nichols || Goulding) <carol.nichols@gmail.com>"]
+authors = ["Erick Tryzelaar <erick.tryzelaar@gmail.com>"]
 
 [dependencies]
 ```
@@ -222,8 +241,8 @@ class: middle, left
 ## Variables
 
 ```rust
-let name = "ashley";
-let age = 30;
+let name = "Erick";
+let age = 37;
 println!("Hi, {}! You are {} years old.", name, age);
 ```
 
@@ -339,6 +358,7 @@ fn main() {
     }
 }
 ```
+
 ???
 
 * Shorthand for numeric type annotation
@@ -485,7 +505,7 @@ class: middle, left
 
 ## Iterators
 
-```
+```rust
 for i in (0..10).filter(|x| x % 2 == 0) {
     println!("i = {}", i);
 }
@@ -613,7 +633,7 @@ class: middle, left
 ```rust
 let a = Some("Carol");
 
-let name = a.expect("No name present");
+let name = a.expect("A value is present");
 println!("Name is {} bytes long", name.len());
 ```
 
